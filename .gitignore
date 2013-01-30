@@ -1,0 +1,11 @@
+## bin and obj paths
+
+RDPMonitor/bin
+RDPMonitor/obj
+
+
+##Per user settings Visual Studio
+
+*.suo
+
+*.user
