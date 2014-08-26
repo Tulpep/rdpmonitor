@@ -15,16 +15,14 @@ namespace RDPMonitor
         {
 
             //Start MSTSC
-            Process mstsc = new Process();
-            mstsc.StartInfo.FileName = "mstsc.exe";
-            mstsc.StartInfo.Arguments = @"\\CAVDCP05\Netlogon\VDI.rdp";
-            mstsc.Start();
+            //Process mstsc = new Process();
+            //mstsc.StartInfo.FileName = "mstsc.exe";
+            //mstsc.StartInfo.Arguments = @"\\CAVDCP05\Netlogon\VDI.rdp";
+            //mstsc.Start();
                          
 
             while (true)
             {
-                Thread.Sleep(2000);
-
                 //Check if process exists
                 Process[] pname = Process.GetProcessesByName("mstsc");
                 if (pname.Length == 0)
@@ -40,8 +38,8 @@ namespace RDPMonitor
                     logoff.Start();
 
                 }
-                                
 
+                Thread.Sleep(1000);      
             }
 
         }
